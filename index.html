@@ -1,151 +1,160 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <title>Happy Birthday to Ainammmmm</title>
-  <style>
+<meta charset="UTF-8">
+<title>Happy Birthday Ainammm</title>
+<img src="ainammm.jpg" class="photo">
+<div class="heart-photo">
+    <img src="ainammm.jpg">
+</div>
+
+<style>
+    .photo {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ff5fa2;
+    box-shadow: 0 0 15px rgba(255,105,180,0.6);
+    margin: 12px auto;
+    display: block;
+}
+
     body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(270deg,
-        red, orange, yellow, green, cyan, blue, violet);
-      background-size: 800% 800%;
-      animation: rainbow 12s ease infinite;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      overflow: hidden;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(
+            270deg,
+            #ff5f6d,
+            #ffc371,
+            #fff176,
+            #81c784,
+            #64b5f6,
+            #9575cd,
+            #f48fb1
+        );
+        background-size: 1400% 1400%;
+        animation: rainbow 18s ease infinite;
+        overflow: hidden;
     }
 
     @keyframes rainbow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
     }
 
-    .heart {
-      position: fixed;
-      color: pink;
-      font-size: 24px;
-      animation: float 6s infinite ease-in;
+    /* คลื่นน้ำ */
+    .wave {
+        position: absolute;
+        bottom: 0;
+        width: 200%;
+        height: 180px;
+        background: rgba(255,255,255,0.35);
+        border-radius: 45%;
+        animation: waveMove 10s linear infinite;
     }
 
-    @keyframes float {
-      0% { transform: translateY(100vh); opacity: 0; }
-      30% { opacity: 1; }
-      100% { transform: translateY(-10vh); opacity: 0; }
+    .wave2 {
+        animation-duration: 16s;
+        opacity: 0.25;
+        bottom: 20px;
     }
 
+    @keyframes waveMove {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+
+    /* กล่องหัวใจ */
     .card {
-      position: relative;
-      width: 380px;
-      padding: 70px 35px 35px;
-      text-align: center;
-      background: transparent;
-    }
-
-    .heart-layer {
-      position: absolute;
-      inset: 0;
-      margin: auto;
-      width: 380px;
-      height: 340px;
-      background: #ffb6c1;
-      transform: rotate(-45deg);
-      border-radius: 20px;
-      z-index: -1;
-    }
-
-    .heart-layer::before,
-    .heart-layer::after {
-      content: "";
-      position: absolute;
-      width: 380px;
-      height: 340px;
-      background: inherit;
-      border-radius: 50%;
-    }
-
-    .heart-layer::before {
-      top: -170px;
-      left: 0;
-    }
-
-    .heart-layer::after {
-      left: 190px;
-      top: 0;
-    }
-
-    .heart-layer.layer2 {
-      transform: rotate(-45deg) scale(1.05);
-      background: #ff8fab;
-      opacity: 0.7;
-      z-index: -2;
-    }
-
-    .heart-layer.layer3 {
-      transform: rotate(-45deg) scale(1.12);
-      backgroun
-
-    .photo {
-      width: 240px;
-      border-radius: 25px;
-      border: 6px solid #ffb6c1;
-      margin-bottom: 15px;
+        position: relative;
+        background: rgba(255,255,255,0.75);
+        border-radius: 30px;
+        padding: 30px 35px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        z-index: 10;
+        max-width: 320px;
     }
 
     h1 {
-      color: #ff4d6d;
-      margin: 10px 0;
+        margin-top: 0;
+        color: #ff2f92;
+        font-size: 22px;
     }
 
-    .wish {
-      font-size: 16px;
-      color: #555;
-      line-height: 1.7;
+    p {
+        color: #7a0046;
+        font-size: 15px;
+        line-height: 1.7;
     }
 
-    .icons {
-      font-size: 26px;
-      margin: 10px 0;
+    .from {
+        margin-top: 12px;
+        font-weight: bold;
+        color: #b0005c;
     }
 
-    .kitty {
-      width: 80px;
-      margin-top: 10px;
+    /* หัวใจลอย */
+    .heart {
+        position: absolute;
+        font-size: 22px;
+        animation: floatUp 6s linear infinite;
+        opacity: 0.8;
     }
-  </style>
+
+    @keyframes floatUp {
+        0% {
+            transform: translateY(0) scale(0.8);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-120vh) scale(1.2);
+            opacity: 0;
+        }
+    }
+</style>
 </head>
 <body>
 
-  <!-- หัวใจลอย -->
-  <div class="heart" style="left:10%">💖</div>
-  <div class="heart" style="left:25%; animation-delay:1s">💕</div>
-  <div class="heart" style="left:45%; animation-delay:2s">💗</div>
-  <div class="heart" style="left:65%; animation-delay:3s">💞</div>
-  <div class="heart" style="left:80%; animation-delay:4s">💘</div>
+<!-- คลื่นน้ำ -->
+<div class="wave"></div>
+<div class="wave wave2"></div>
 
-  <div class="card">
-    <img src="ainammo.jpg" width="150" height="150" class="heart-pic"/>
-
-    <h1>🎂 Happy Birthday 🎉</h1>
-
-    <div class="icons">🎈🎂💖🎉</div>
-
-    <p class="wish">
-      สุขสันต์วันเกิดนะไอ💕<br>
-      มันอาจจะไม่ค่อยสวย<br>
-      แต่เค้าตั้งใจทำให้นะ<br>
-      ขอให้ไอได้เกรด A เย้อๆ✨<br>
-      สมหวังในทุกสิ่งที่ตั้งใจมีคนรัก<br>
-      มีคนซัพพอร์ตเสมอ<br>
-      เจอแต่คนใจดีนะ เพื่อน 🤍<br>
+<!-- การ์ดคำอวยพร -->
+<div class="card">
+    <h1>Happy Birthday to Ainammm 🎉</h1>
+    <p>
+        ขอให้ไอมีแต่ความสุขมากๆในทุกๆวัน 🌈<br>
+        ได้เกรด A เย้อๆ 📚✨<br>
+        มีแต่คนรัก เจอแต่คนใจดี 💕<br>
+        มันอาจจะไม่ค่อยสวย<br>
+        แต่เค้าตั้งใจทำให้นะ 55555 😆
     </p>
+    <div class="from">— pphatsara_m</div>
+</div>
 
-
-    <div class="icons">🎀 pphatsara_m 🎀</div>
-  </div>
+<script>
+    // สร้างหัวใจลอย
+    for (let i = 0; i < 20; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.innerHTML = '💖';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.bottom = '-10vh';
+        heart.style.animationDelay = Math.random() * 6 + 's';
+        heart.style.fontSize = (18 + Math.random() * 18) + 'px';
+        document.body.appendChild(heart);
+    }
+</script>
 
 </body>
 </html>
